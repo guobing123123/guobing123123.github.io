@@ -1,11 +1,11 @@
 # Basic
-title: 潘柏信
-subtitle: 个人站
+title: 郭冰
+subtitle: 个人博客
 description: 欢迎来到我的个人站~
 # 头像里面的标题
 avatarTitle: leopardpan
 # 头像里面的描述
-avatarDesc: iOS / 机器学习
+avatarDesc: 曹欢
 url: "http://baixin.io"
 
 # Comment
@@ -22,7 +22,7 @@ social:
     # juejin: xxx
     jianshu: 2ada30d8d0f7
     # twitter: 
-    mail: leopardpan@icloud.com
+    mail: 2511863074
 
 
 # 百度统计 

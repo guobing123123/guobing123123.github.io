@@ -5,59 +5,96 @@ date: 2016-12-02
 tag: iOS
 ---
 
-### NSKeyedArchiver 自定义对象写文件
+git status   查看工作区.暂存区的状态
+git add 文件名  将工作区的新建/修改存储到暂存区
+git cat  查看文件里的内容
+git commit -m "注释"  将暂存区的内容提交到本地库
+git log  显示最完整的版本号
+git log --pretty=oneline  显示完整的版本号
+git log --online   显示最简洁的版本号
+git reflog   显示版本号    显示到哪个版本需要移动几步
+git reset --hard 版本号     回退到需要的版本号
+git reset --hard HEAD^    回退1个版本    ^^两个几个符号就是几个不能前进只能后退
+git reset --hard HEAD~2    回退2个版本   ~10 回退10个版本    数字是几回退几个  只能后退
+git reset --hard 版本号   在本地库找回版本号
+rm 文件名   删除本地库文件    //找回文件
+git add 文件名  提交到暂存区
+git commit -m "" 提交到本地库    
+git diff 文件名    查看修改的内容  
+git diff HEAD      跟本地库的版本比较
+git diff HEAD^   跟本地库上一个版本比较
+git checkout -- 版本撤回
+
+#### 分支***
+
+1. git status 查看在哪个分支上
+
+2. git branch -v  查看所有的分支
+
+3. git branch  分支名      创建一个分支
+
+4. git checkout  分支名      切换分支
+
+5. 合并分支  切换到接受修改的分支上
+
+6. 把修改的内容合并到合并到主分支上    默认分支是主分支
+
+7. git merge  分支名    合并分支    分支名写要合并的分支
+
+8. get checkout -b 分支名      新建分支并切换
+
+   分支管理策略
+
+   1. git checkout -b 分支名 新建分支并且切换
+   2. git add  文件名
+   3. git commit 文件名
+   4. git merge --no-ff -m "merge with no-ff" 文件名      准备合并文件分支，请注意--no-ff参数，表示禁用Fast forward
+   5. git log 查看版本号
+   6. git stash   隐藏文件   维修完   
+   7. git stash pop   找到隐藏文件\
+   8. git branch -d 分支名    删除分支
+   9. git branch -D 分支名     删除不了强制删除
+
+   
+
+#### 分支冲突
+
+1.git add 文件名   解除冲突
+2.git status  查看分支状态
+3.git commit -m  ""       结束分支
+
+#### 添加远程仓库
+
+1.git remote add origin git@github.com:guobing123123/learngit.git    本地仓库关联远程仓库
+2.git push -u origin master                     把本地仓库推送到远程库ls
+
+#### 克隆 
+
+git@github.com:guobing123123/aihuan.gitgit config --list  查看设置过的参数	
+git clone 地址      从远程仓库克隆文件到目录
+git remote -v  查看克隆内容的别名
+           初始化本
+
+git fetch 远程库地址名   远程分支名
+
+git checkout远程库地址名/远程分支名的内容   cat 文件名
+
+git push -u 名字 要推送的分支名  推送到仓库
 
 
-如果存储的对象类名有变动，则需要设置clasName, 方法为：“setClassName:forClass:”        
-使用 NSKeyedArchiver 进行数据持久化时, 系统会默认使用类名去建表，如果类名变了，那么使用新的类名肯定是从本地获取不到表的，代码执行崩溃。     
-所以需要在 NSKeyedArchiver 或者 NSKeyedUnarchiver 时使用 “setClassName:forClass:” 指定类名。 
 
 
-### 断点配置：【Generate Debug Symbols】     
 
-描述: 用来控制断点是否生效,关闭此功能，打包 `.ipa` 时，包体积会小很多。    
-配置路径:【project/TARGETS/Build Settings/Apple LLVM7.1 - Code Genneration/Generate Debug Symbols】    
+cd.ssh 进入公钥秘钥存放的目录    
 
+vim id_rsa.pub 进入公钥 
 
-### 捕获全局异常：【All Exception】    
+ssh-keygen -t rsa -C 用户名
 
-描述: 用来捕捉整个项目在 Xcode 里执行时的异常。例如：try/catch 时 catch住的异常,【All Exception】可以直接定位到具体位置。     
-配置路径: 异常捕捉(commod+7)/Xcode左下角点击+/Add Exception Breakpoint/完成(回车键)  
+ll   查看目录
 
+cat id_rsa     查看文件	
 
-### UI相关
+复制公钥
 
-1、设置状态栏颜色：
-
-```
-
-info.plist 添加 View controller-based status bar appearance - NO     
-代码里写 [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent]; 再次运行后状态栏就会变成白色。    
-
-```
-
-2、左滑返回手势失效了怎么办：   
-
-```    
-
-设置 navigationItem.leftBarButtonItem 之后，左滑返回手势就会失效。设置一下 UIGestureRecognizerDelegate 代理即可：
-
-self.navigationController.interactivePopGestureRecognizer.delegate = self;
-
-```
-
-3、让 TableView的 下拉 和 上拉 显示不一样的背景颜色：
-
-```
-
-给 TableView 上加一个 View，View 的 Frema：
-CGRectMake(0, -self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height + 2)，
-给变View的背景颜色就可以了。
-
-```
-
-
-<br>
-转载请注明：[潘柏信的博客](http://baixin) » [iOS开发中的小问题记录](http://baixin.io/2016/12/iOS_Dev_Note/)  
-
-
+填写到网站上
