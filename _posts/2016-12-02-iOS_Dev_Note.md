@@ -1,5 +1,15 @@
 ---
-git 教程
+layout: post
+title: VimHub
+date: 2019-11-10 
+tags: 命令    
+---
+
+# Git
+
+## git基础命令  
+
+  
 ---
 #### 配置git   
 git config -global user.name "名字"			每次提交时显示的用户名  
