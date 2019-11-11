@@ -3,39 +3,40 @@ layout: page
 title: 关于我 
 ---
 
-一个人见人爱,花见花开的帅哥
+Hello 
 <p>
-My name is Guo Bing.
+喜爱一个人只需要短短的一分钟，当我第一眼看到你的时候我就知道，你是我这一辈子要定的人。想念你，无论在每个晨曦，每个日落，思念的长线总也拽不开我早已在你身上打下的烙印
 <p>
-Especially interested in a girl
+最难忘的是你的微笑，当它绽开在你的脸上时，我仿佛感到拂过一阵春风，暖融融的，把我的心都溶化了。
+
 
 <p>
 
 <h3> 我们的博客 </h3>  
 <p>
 
-The girl is not mine at the moment
+如果有一天，我化作了一杯黄土，这黄土上长出的青草也是为你而绿，开出的黄花也是为你而香
 
 <p>
 
-My girl Cao Huan, do you feel my love
+淡照霜飞的是一丝银菊，书写秋空的是一片月华，温润心田的是一抹恩爱，缘系今生的是一世情缘。家长寄语怎么写
 
 
 <p>
 
-Although we are far apart
+
+
+<p> 
+在冬日阳光下重缝任和风将沉睡的记忆唤醒情思，放飞了翅膀悲凉，弥漫在心底你再拾起却见残阳褪去试举杯清波漾漾人却难醉
+
 
 <p> 
 
-I will always be with you, let you feel my sincerity
 
 <p> 
 
-Every time you say I'm against my will,
-<p> 
-What I want to say is that I really like you, even though we have only met once. I will prove my love for you with action
 <p>
-When I'm tired, all I think of is you
+
 <p>
 
 {% include comments.html %}
